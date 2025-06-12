@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Cupcakes</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧁 Group3 Cravings Bakery</h1>
+    <p>Freshly baked cupcakes delivered to your doorstep!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#menu" class="nav-link">View Menu</a>
+    <a href="Login.html" class="nav-link">Login</a>
+    <a href="#cart" class="nav-link">Cart</a>
+    <a href="Menu.html" class="nav-link">Menu</a>
+  </nav>
+
+  <!-- Menu Section -->
+  <div id="menu">
+    <h2 style="text-align:center; color:#e75480;">Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="Chocolate.jpg" alt="Chocolate Delight">
+        <h3>Chocolate Delight</h3>
+        <p>Rich chocolate sponge with chocolate ganache.</p>
+        <button onclick="addToCart('Chocolate Delight')">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="Vanilla.jpg" alt="Vanilla Dream">
+        <h3>Vanilla Dream</h3>
+        <p>Classic vanilla sponge topped with buttercream frosting.</p>
+        <button onclick="addToCart('Vanilla Dream')">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="Strawberry.jpg" alt="Strawberry Bliss">
+        <h3>Strawberry Bliss</h3>
+        <p>Fresh strawberry jam filling with pink frosting.</p>
+        <button onclick="addToCart('Strawberry Bliss')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <div id="cart">
+    <h2 style="text-align:center; color:#e75480;">Your Cart</h2>
+    <div id="cart-items">
+      <ul></ul>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+<div id="contact">
+  <h2 style="text-align:center; color:#e75480;">Contact Us</h2>
+  <div class="contact-box">
+    <div class="contact-item">
+      <h3>📞 Phone Number</h3>
+      <p><a href="tel:+11234567890">+855 89 888 576</a></p>
+    </div>
+    <div class="contact-item">
+      <h3>📍 Location</h3>
+      <p>PrekLeap 6A Street, , CC 12345</p>
+    </div>
+    <div class="contact-item">
+      <h3>🕒 Hours</h3>
+      <p>Mon - Fri: 9AM - 6PM<br>Sat - Sun: 10AM - 4PM</p>
+    </div>
+	<div class="contact-item">
+      <h3>Email</h3>
+      <p>cupcakebygroup3@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sweet Cravings Bakery. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Add to Cart -->
+  <script>
+    function addToCart(itemName) {
+      const cart = document.querySelector("#cart-items ul");
+      const li = document.createElement("li");
+      li.textContent = itemName;
+      cart.appendChild(li);
+    }
+
+    function handleContact(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    }
+  </script>
+
+</body>
+</html>

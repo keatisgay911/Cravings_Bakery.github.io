@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Cupcakes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Menu Section -->
+<section class="menu-section">
+  <h2>Our Cupcake Menu</h2>
+  <p class="menu-subtitle">Try our delicious varieties made with love!</p>
+
+  <div class="menu-grid">
+    <!-- Cupcake Items -->
+    <div class="menu-item">
+      <img src="Chocolate.jpg" alt="Chocolate Cupcake">
+      <h3>Chocolate Delight</h3>
+      <p>Rich chocolate sponge with smooth ganache topping.</p>
+      <span class="price">$2.89</span>
+      <button onclick="addToCart('Chocolate Delight')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Vanilla.jpg" alt="Vanilla Cupcake">
+      <h3>Vanilla Dream</h3>
+      <p>Classic vanilla sponge with creamy frosting.</p>
+      <span class="price">$2.89</span>
+      <button onclick="addToCart('Vanilla Dream')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Strawberry.jpg" alt="Strawberry Cupcake">
+      <h3>Strawberry Bliss</h3>
+      <p>Fresh strawberry jam with pink swirl frosting.</p>
+      <span class="price">$3.29</span>
+      <button onclick="addToCart('Strawberry Bliss')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="RV.jpg" alt="Red Velvet Cupcake">
+      <h3>Red Velvet Love</h3>
+      <p>Soft red velvet with cream cheese frosting.</p>
+      <span class="price">$3.49</span>
+      <button onclick="addToCart('Red Velvet Love')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Oreo.jpg" alt="Oreo Cupcake">
+      <h3>Oreo Explosion</h3>
+      <p>Chocolate base filled with crushed Oreo bits.</p>
+      <span class="price">$3.79</span>
+      <button onclick="addToCart('Oreo Explosion')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Carrot.jpg" alt="Carrot Cake Cupcake">
+      <h3>Carrot Cake Surprise</h3>
+      <p>Spiced carrot cake with cinnamon and walnuts.</p>
+      <span class="price">$4.20</span>
+      <button onclick="addToCart('Carrot Cake Surprise')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Rainbow.jpg" alt="Lemon Cupcake">
+      <h3>Rainbow Cake</h3>
+      <p>We had so much fun making these rainbow cupcakes, figuring out how to layer our cake batter colors, and just how adorable these turned out.</p>
+      <span class="price">$3.19</span>
+      <button onclick="addToCart('Zesty Lemon Burst')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="Fish.jpg" alt="Mint Cupcake">
+      <h3>Fish Cake</h3>
+      <p>These delightful Fish Cupcakes are a perfect treat for any occasion. With Oreo cookies transformed into adorable fish shapes and colorful candy melts, these cupcakes are as delicious as they are eye-catching.</p>
+      <span class="price">$3.59</span>
+      <button onclick="addToCart('Mint Chocolate Chip')">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- Back Button -->
+<div class="back-button-container">
+  <a href="index.html" class="back-btn">⬅ Back to Home</a>
+</div>
+ <!-- Footer -->
+  <footer>
+    <p>© 2025 Sweet Cravings Bakery. All rights reserved.</p>
+  </footer>
+
+<script>
+  function addToCart(itemName) {
+    alert(itemName + " has been added to your cart!");
+    // You can enhance this later with actual cart functionality
+  }
+</script>
+
+</body>
+</html>

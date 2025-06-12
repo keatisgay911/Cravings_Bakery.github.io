@@ -1,0 +1,468 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe5ec, #fffaf0);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 15px;
+  animation: fadeInDown 1s ease-in-out;
+}
+header 
+header h1 {
+  font-size: 1.8rem;
+  color: #e75480;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #fff0f5;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #e75480;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c53d6b;
+}
+
+/* Sections */
+section,
+div {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 15px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Background container */
+.cupcake-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So cupcakes don't block clicks */
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(to bottom right, #fcefee, #fff0f6);
+}
+
+/* Cupcake styles */
+.cupcake {
+  position: absolute;
+  width: 80px;
+  opacity: 0.2;
+  animation: float linear infinite;
+  will-change: transform;
+}
+
+/* Individual cupcake animations */
+.cupcake1 {
+  top: 10%;
+  left: 10%;
+  animation-duration: 25s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+
+.cupcake2 {
+  top: 30%;
+  left: 70%;
+  animation-duration: 30s;
+  animation-delay: 2s;
+}
+
+.cupcake3 {
+  top: 60%;
+  left: 40%;
+  animation-duration: 35s;
+  animation-delay: 4s;
+}
+
+.cupcake4 {
+  top: 80%;
+  left: 20%;
+  animation-duration: 40s;
+  animation-delay: 6s;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0px) rotate(-10deg);
+    opacity: 0.2;
+  }
+}
+/* Cupcake Menu */
+.menu-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff8f9;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #e75480;
+}
+
+.menu-section .menu-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+  color: #e75480;
+  font-size: 1.1rem;
+}
+
+.menu-item p {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0 10px 10px;
+  flex-grow: 1;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin: 5px 0;
+}
+
+.menu-item button {
+  background-color: #f093b0;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+  background-color: #d87ba0;
+}
+
+/* Back Button */
+.back-button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.back-btn {
+  background: #e75480;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #c73e6c;
+}
+
+/* Cart */
+#cart {
+  text-align: center;
+}
+
+#cart-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Contact Us */
+/* Contact Box */
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 900px;
+  border: 1px solid #ffe5ec;
+}
+
+.contact-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item h3 {
+  color: #e75480;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.contact-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact-item a {
+  color: #e75480;
+  text-decoration: none;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: #ffe5ec;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #f093b0;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe5ec; /* Light pink background */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.container h2 {
+  font-size: 1.8rem;
+  color: #e75480;
+  margin-bottom: 20px;
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: white;
+  padding: 0 6px;
+  font-size: 0.8rem;
+  color: #e75480;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e75480;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #f093b0;
+  box-shadow: 0 0 8px rgba(231, 84, 128, 0.3);
+}
+
+/* Label float up on focus */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -18px;
+  left: 6px;
+  font-size: 0.75rem;
+  color: #d87ba0;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #e75480;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d87ba0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  color: #e75480;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #c53d6b;
+}

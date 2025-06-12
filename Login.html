@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form class="contact-form">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Go Back Button -->
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+  </div>
+   <!-- Footer -->
+  <footer>
+    <p>© 2025 Sweet Cravings Bakery. All rights reserved.</p>
+  </footer>
+<script>
+const formContainer = document.querySelector('.container');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+observer.observe(formContainer);
+</script>
+</body>
+</html>
